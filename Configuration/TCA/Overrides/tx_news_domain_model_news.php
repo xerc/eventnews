@@ -98,5 +98,5 @@ $GLOBALS['TCA']['tx_news_domain_model_news']['palettes']['palette_eventfields'] 
 $GLOBALS['TCA']['tx_news_domain_model_news']['ctrl']['typeicon_classes']['userFunc'] = \GeorgRinger\Eventnews\Hooks\IconHook::class . '->run';
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_news_domain_model_news', $fields);
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tx_news_domain_model_news', 'is_event,--palette--;;palette_event', '', 'after:datetime');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tx_news_domain_model_news', ',--div--;LLL:EXT:eventnews/Resources/Private/Language/locallang_db.xlf:tab.eventnews,--palette--;;palette_eventfields', '', 'after:teaser');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('tx_news_domain_model_news', 'paletteCore', 'is_event');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tx_news_domain_model_news', '--div--;LLL:EXT:eventnews/Resources/Private/Language/locallang_db.xlf:tab.eventnews,--palette--;;palette_event,--palette--;;palette_eventfields', '', 'after:fal_related_files');
