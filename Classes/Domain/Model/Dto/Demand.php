@@ -133,7 +133,7 @@ class Demand extends NewsDemand
     public function getNonEmptyArrayValues($array)
     {
         $out = [];
-        if (is_array($array)) {
+        if (\is_array($array)) {
             foreach ($array as $k => $v) {
                 if (!empty($v)) {
                     $out[$k] = $v;

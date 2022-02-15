@@ -20,7 +20,7 @@ class NewsImportAspect
     public function postHydrate(array $importData, $news): void
     {
         /** @var \GeorgRinger\Eventnews\Domain\Model\News $news */
-        if (is_array($importData['_dynamicData'])) {
+        if (\is_array($importData['_dynamicData'])) {
             if (isset($importData['_dynamicData']['location'])) {
                 $news->setLocationSimple(trim($importData['_dynamicData']['location']));
             }

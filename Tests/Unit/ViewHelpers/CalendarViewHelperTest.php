@@ -65,7 +65,7 @@ class CalendarViewHelperTest extends BaseTestCase
             $beginDate = new \DateTime($item[1]);
             $news->setDatetime($beginDate);
 
-            if (!is_null($item[2])) {
+            if (!\is_null($item[2])) {
                 $endDate = new \DateTime($item[2]);
                 $news->setEventEnd($endDate);
             }

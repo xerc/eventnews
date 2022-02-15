@@ -82,7 +82,7 @@ class NewsController extends \GeorgRinger\News\Controller\NewsController
         /** @var \GeorgRinger\Eventnews\Domain\Model\Dto\Demand $demand */
         $demand = $this->createDemandObjectFromSettings($this->settings,
             'GeorgRinger\\Eventnews\\Domain\\Model\\Dto\\Demand');
-        if (is_array($overwriteDemand) && !empty($overwriteDemand)) {
+        if (\is_array($overwriteDemand) && !empty($overwriteDemand)) {
             $demand = $this->overwriteDemandObject($demand, $overwriteDemand);
         }
         if (!$demand->getMonth()) {
